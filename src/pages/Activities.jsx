@@ -5,6 +5,11 @@ import { EVENT_TYPES, today } from '../lib/constants'
 import Reveal from '../components/Reveal'
 import { PageHead, State, Chips, SourceLink, fmtDate } from '../components/Ui'
 
+const COMPETITIONS = [
+  ['Программчлалын тэмцээн', 'Тэнхимээс жил бүр зохион байгуулдаг оюутнуудын программчлалын тэмцээн.'],
+  ['Бүтээлийн уралдаан', 'Жил бүр зохион байгуулагддаг оюутнуудын бүтээлийн уралдаан. M Bank-ны ивээн тэтгэлгээр явагддаг.'],
+]
+
 export default function Activities() {
   const [type, setType] = useState('all')
   const [open, setOpen] = useState(null)
@@ -67,6 +72,17 @@ export default function Activities() {
         <a className="btn ghost" href="https://www.facebook.com/profile.php?id=61576135060864" target="_blank" rel="noreferrer">Facebook ↗</a>
         <a className="btn ghost" href="https://www.instagram.com/ism_last_login/" target="_blank" rel="noreferrer">Instagram: ism_last_login ↗</a>
       </div>
+      <h2 className="h3">Жил бүрийн тэмцээн</h2>
+      <div className="grid3" style={{ marginBottom: 32 }}>
+        {COMPETITIONS.map(([title, text]) => (
+          <div key={title} className="glass card-pad">
+            <small className="cyan">Жил бүр</small>
+            <h3>{title}</h3>
+            <p className="muted">{text}</p>
+          </div>
+        ))}
+      </div>
+      <p className="muted" style={{ marginBottom: 20 }}>2022 оноос хойш тэнхим жил бүр хавар, намар гэсэн хоёр удаа тэнхимийн өдөрлөг зохион байгуулдаг.</p>
       <Chips value={type} onChange={setType} options={[['all', 'Бүгд'], ...EVENT_TYPES.map(t => [t, t])]} />
       <State loading={loading} error={error} empty count={list.length} />
 
