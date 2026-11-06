@@ -1,16 +1,26 @@
-# React + Vite
+# ISM Digital Museum
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+СЭЗИС-ийн Мэдээллийн системийн менежментийн тэнхимийн цахим музей. React + JavaScript (Vite), Supabase (Auth, PostgreSQL, Storage, RLS), Vercel.
 
-Currently, two official plugins are available:
+## Суулгах
+```bash
+npm install
+cp .env.example .env      # Windows: copy .env.example .env, дараа нь утгуудыг бөглөнө
+npm run dev
+```
+`.env`-д `VITE_SUPABASE_URL`, `VITE_SUPABASE_ANON_KEY` (anon/publishable түлхүүр). `service_role` түлхүүрийг ХЭЗЭЭ Ч хийхгүй.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Өгөгдлийн сан (Supabase → SQL Editor)
+1. `sql/01_schema.sql` ажиллуулна (хүснэгт нэмэх, RLS)
+2. `sql/02_seed.sql` ажиллуулна (баталгаатай эх сурвалжтай мэдээлэл)
+3. Storage → `images` bucket (Public) байх ёстой
+4. Сайтаар бүртгүүлсний дараа Table Editor → `profiles` → өөрийн `role`-ийг `admin` болгоно
 
-## React Compiler
+## Хуудсууд
+Нүүр, Тэнхимийн тухай (мэргэжил, хичээл, 1–4 курс, Time Machine түүх), Цахим музей, Оюутны бүтээл, Багш нар (дэлгэрэнгүй профайл), Арга хэмжээ, Зурагт цомог (Grid/Masonry/Lightbox), Ангилал, Профайл, Нэвтрэх/Бүртгүүлэх, Админ (/admin).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Deploy
+GitHub-д push → Vercel Import → Environment Variables-д дээрх хоёр утгыг нэмээд Deploy. Supabase → Authentication → URL Configuration-д Vercel домайнаа оруулна.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Эх сурвалж
+ufe.edu.mn/c/76, ISMD Facebook/Instagram, repository.ufe.edu.mn, online.ufe.edu.mn, training.ufe.edu.mn
