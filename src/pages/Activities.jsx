@@ -10,6 +10,12 @@ const COMPETITIONS = [
   ['Бүтээлийн уралдаан', 'Жил бүр зохион байгуулагддаг оюутнуудын бүтээлийн уралдаан. M Bank-ны ивээн тэтгэлгээр явагддаг.'],
 ]
 
+const CLUBS = [
+  { name: 'White Hats club', founded: '2022', head: 'Б.Оюу',
+    text: 'МСМ тэнхимийн оюутнуудын клуб. 2022 онд үүсгэн байгуулагдсан. Одоогийн тэргүүн Б.Оюу.',
+    url: 'https://www.instagram.com/ufe_whitehats/' },
+]
+
 export default function Activities() {
   const [type, setType] = useState('all')
   const [open, setOpen] = useState(null)
@@ -72,6 +78,18 @@ export default function Activities() {
         <a className="btn ghost" href="https://www.facebook.com/profile.php?id=61576135060864" target="_blank" rel="noreferrer">Facebook ↗</a>
         <a className="btn ghost" href="https://www.instagram.com/ism_last_login/" target="_blank" rel="noreferrer">Instagram: ism_last_login ↗</a>
       </div>
+      <h2 className="h3">Оюутны клуб, хамтын ажиллагаа</h2>
+      <div className="grid3" style={{ marginBottom: 32 }}>
+        {CLUBS.map(c => (
+          <a key={c.url} href={c.url} target="_blank" rel="noreferrer" className="glass card-pad">
+            <small className="cyan">Үүсгэн байгуулагдсан: {c.founded} · Тэргүүн: {c.head}</small>
+            <h3>{c.name}</h3>
+            <p className="muted">{c.text}</p>
+            <span className="src">Instagram: ufe_whitehats ↗</span>
+          </a>
+        ))}
+      </div>
+
       <h2 className="h3">Жил бүрийн тэмцээн</h2>
       <div className="grid3" style={{ marginBottom: 32 }}>
         {COMPETITIONS.map(([title, text]) => (

@@ -16,7 +16,7 @@ insert into events (title, event_date, event_type, location, organizer, particip
  '2023 оны хаврын спорт өдөрлөг.',
  null, 'https://www.instagram.com/ufe_ismd/', true),
 
-('Намрын өдөрлөг — 2023 (All of us ISM Workshop)', '2023-11-11', 'Намрын өдөрлөг', null,
+('Намрын өдөрлөг — 2023 (All of us ISM Workshop)', '2023-11-11', 'Тэнхимийн өдөрлөг', null,
  'Мэдээллийн систем менежментийн тэнхим', 'Тэнхимийн оюутнууд',
  'Оюутнуудыг нэгтгэх, багийн ажиллагаа',
  '2023 оны намрын өдөрлөг. "All of us ISM Workshop" нэртэй бүлгийн үйл ажиллагаа явагдсан.',
@@ -28,7 +28,7 @@ insert into events (title, event_date, event_type, location, organizer, particip
  '2024 оны хаврын спорт өдөрлөг (Friendship sports day). Instagram хуудсанд 2024.05.27-нд бичлэг нийтлэгдсэн.',
  '/events/sports-day.jpg', 'https://www.instagram.com/ufe_ismd/', true),
 
-('ISMD Networking Day — 2024 намар', '2024-11-09', 'Намрын өдөрлөг', 'Goo Terelj Resort',
+('ISMD Networking Day — 2024 намар', '2024-11-09', 'Тэнхимийн өдөрлөг', 'Goo Terelj Resort',
  'Мэдээллийн систем менежментийн тэнхим', 'Тэнхимийн оюутан, багш нар',
  'Unite, Learn, and Grow together!',
  'Хөтөлбөр: Unite (цуглаж, Амралтын газарлуу явах, багт хуваагдах), Learn (нээлтийн үйл ажиллагаа, илтгэл хэлэлцүүлэг, Icebreaking game), Entertainment (өдрийн хоол, 1 болон 2-р курсын оюутнуудын урлагийн мэндчилгээ, Entertainment хэсэг), Enjoy (оройн хоол, аз ёндоогоо шалгах цаг, чөлөөт цаг, галын наадам). СЭЗИС дээр автобус зогссон.',
@@ -45,7 +45,7 @@ insert into events (title, event_date, event_type, location, organizer, particip
  null, '2025 оны хаврын тэнхимийн өдөрлөг "IT Power Play".',
  null, 'https://www.instagram.com/ufe_ismd/', true),
 
-('Нөхөрлөл өдөрлөг — 2025 намар', null, 'Намрын өдөрлөг', null,
+('Нөхөрлөл өдөрлөг — 2025 намар', null, 'Тэнхимийн өдөрлөг', null,
  'Мэдээллийн систем менежментийн тэнхим', 'Тэнхимийн оюутнууд',
  null, '2025 оны намрын "Нөхөрлөл" өдөрлөг.',
  '/events/welcome-night.jpg', 'https://www.instagram.com/ufe_ismd/', true),
@@ -56,7 +56,7 @@ insert into events (title, event_date, event_type, location, organizer, particip
  'Тэмцээний төрлүүд: гар бөмбөг, буухиа тэмцээн. Ирээдүйн технологийн эзэд болсон оюутнууд, төгсөгчид, багш нарыг урьсан. 2026 оны 4-р сарын 18.',
  '/events/sports-2026.jpg', 'https://www.instagram.com/ufe_ismd/', true),
 
-('The Last Login ISMD — Networking Event (2026 намар)', '2026-10-30', 'Намрын өдөрлөг', '4C, СЭЗИС',
+('The Last Login ISMD — Networking Event (2026 намар)', '2026-10-30', 'Тэнхимийн өдөрлөг', '4C, СЭЗИС',
  'Мэдээллийн систем менежментийн тэнхим', 'Тэнхимийн оюутнууд',
  'Networking: лекц, харилцаа холбоо, хоол, тоглоом',
  '2026.10.30, 14:00–17:00. Хөтөлбөр: Lecture, Communication, Catering, Games. Оролцооны төлбөр 5K.',
